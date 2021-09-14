@@ -9,7 +9,7 @@ for (const element of toggle) {
 }
 
 /* When click on a menu's item, hide the menu */
-const links = document.querySelectorAll('nav .desktop-links .fixed-links')
+const links = document.querySelectorAll('nav .desktop-links')
 
 for (const link of links) {
   link.addEventListener('click', function () {

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <!-- PAGE INFO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" />
+    <title>Gobeyond Desafio 1#</title>
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="assets/icones/style.css" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header id="header">
+        <nav class="container">
+
+            <!-- toggle mobile -->
+            <div class="toggle icon-menu"></div>
+            <div class="toggle icon-close"></div>
+
+            <a href="#home" class="logo">
+                <picture>
+                    <source media="(max-width:545px)" srcset="assets/logo-mobile.png" type="image/png">
+                    <img src="assets/logo-gb.png" alt="Logo" type="image/png">
+                </picture>
+            </a>
+
+            <!-- menu -->
+            <div class="top-menu">
+                <ul class="desktop-links">
+                    <li><a class="title" href="#home">Home</a></li>
+
+                    <li><a class="title" href="#products">Produtos
+                            <i class="icon-drop_down"></i></a></li>     
+                    
+                    <li><a class="title" href="#newsletter">Newsletter</a></li>    
+                    <li><a class="title" href="#contact">Contato</a></li>
+                </ul>
+                
+                <ul class="fixed-links">
+                    <li>
+                        <div class="dropdown">
+                            <button onclick="searchFunction()" class="dropbtn"><i class="icon-search"></i></button>
+                            <div id="searchDropdown" class="dropdown-content">
+                              <input type="search" placeholder="O que está procurando?"" id="search-input" onkeyup="filterFunction()">
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#"><i class="icon-cart"></i><span class="badge"> 3</span></a></li>
+                    <li><a href="#"><i class="icon-account" title="Minha Conta"></i>
+                    <span class="account"></span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section class="section" id="home">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="slide-image fade">
+                    <div class="numbertext">1 / 3</div>
+                    <picture>
+                        <source media="(max-width:545px)" srcset="assets/Banner-mobile.png" type="image/png">
+                        <img src="assets/Banner.png" alt="Logo" type="image/png" style="width:100%">
+                    </picture>
+                    <div>
+                        <h1 class="hero-text">Olá, você quer fazer entrar de cabeça em desenvolvimento?</h1> 
+                        <h2 class="hero-text">front-end • back-end • mobile</h1>
+                    </div>
+                </div>
+
+                <div class="slide-image fade">
+                    <div class="numbertext">2 / 3</div>
+                    <picture>
+                        <source media="(max-width:545px)" srcset="assets/Banner-mobile.png" type="image/png">
+                        <img src="assets/Banner.png" alt="Logo" type="image/png" style="width:100%">
+                    </picture>
+                    <div>
+                        <h1 class="hero-text">Slider 2</h1> 
+                    </div>
+                </div>
+
+                <div class="slide-image fade">
+                    <div class="numbertext">3 / 3</div>
+                    <picture>
+                        <source media="(max-width:545px)" srcset="assets/Banner-mobile.png" type="image/png">
+                        <img src="assets/Banner.png" alt="Logo" type="image/png" style="width:100%">
+                    </picture>
+                    <div>
+                        <h1 class="hero-text">Slider 3</h1>
+                    </div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="section-products" id="products">
+            <div class="container">
+                <h1 class="best-sellers">Mais Vendidos</h1>
+                <div class="divider"></div>
+
+                <div class="cards grid ">
+                    <div class="card ">
+                        <span class="badge-off"><p>OFF</p></span>
+                        <img src="assets/products/shoe.jpg" alt="Sapato" class="product-image">
+                        <div class="info-product">
+                            <p>SAPATO FLOATER PRETO</p>
+                            <i class="icon-rating"></i><br>
+                            <p>de R$ 299,00</p>
+                            <p class="price">por R$ 259,90</p>
+                            <p>ou em 9x de R$ 28,87</p>
+                            <a href=" https://wa.me/+5575988915349" target="_blank"><button class="buy-btn">
+                                <i class="icon-whatsapp"></i>COMPRAR</button></a>
+                        </div>
+                    </div>
+
+                    <div class="card ">
+                        <span class="badge-off"><p>OFF</p></span>
+                        <img src="assets/products/sneakers.jpg" alt="Tênis" class="product-image">
+                        <div class="info-product">
+                            <p>TÊNIS MICHAEL JORDAN</p>
+                            <i class="icon-rating"></i><br>
+                            <p>de R$ 399,00</p>
+                            <p class="price">por R$ 359,90</p>
+                            <p>ou em 9x de R$ 39,99</p>
+                            <a href=" https://wa.me/+5575988915349" target="_blank"><button class="buy-btn">
+                                <i class="icon-whatsapp"></i>COMPRAR</button></a>
+                        </div>
+                    </div>
+
+                    <div class="card ">
+                        <span class="badge-off"><p>OFF</p></span>
+                        <img src="assets/products/watch.jpg" alt="Relógio" class="product-image">
+                        <div class="info-product">
+                            <p>RELÓGIO PANERAI</p>
+                            <i class="icon-rating"></i><br>
+                            <p>de R$ 299,00</p>
+                            <p class="price">por R$ 259,90</p>
+                            <p>ou em 9x de R$ 28,87</p>
+                            <a href=" https://wa.me/+5575988915349" target="_blank"><button class="buy-btn">
+                                <i class="icon-whatsapp"></i>COMPRAR</button></a>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>    
+        </section>
+
+        <section class="section form" id="newsletter">
+            <div class="container ">
+                <h1 class="title">Participe de nossas news com promoções e novidades!</h1>
+                <form id="form" autocomplete="off">
+                    <input type="text" placeholder="Digite seu nome" id="name" required/>
+                    <input type="text" placeholder="Digite seu e-mail" id="email" required/>
+                    <input type="submit" value="Eu quero!" id="register" />
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer id="contact">
+        <div class="container">
+            <div class="footer">
+
+            <div class="info">
+                <h1 class="locate">Localização</h1>
+                <div class="divider"></div>
+                <ul class="grid">
+                <li>
+                    <i class=" icon-map-pin"></i> Avenida Andrômeda, 2000, Alphavile SP
+                    </li>
+                    <li><i class="icon-mail"></i> brasil@corebiz.ag</li>
+                    <li><i class="icon-phone"></i> +55 11 3090 1039</li>
+                </ul>
+            </div>
+
+            <div class="grid contact">
+                <a href="#" >
+                    <i class="icon-mail"></i> ENTRE EM CONTATO
+                </a>
+                <a href="#" >
+                    <i class="icon-support"></i> CHAT ONLINE
+                </a>
+            </div>
+
+            <div class="logos-footer">
+                <a href="#">
+                    <img src="assets/corebiz.png" alt="Logo Corebiz" />
+                </a>
+                <a href="#">
+                    <img src="assets/vtex.png" alt="Logo Vtex" />
+                </a>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script.js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
